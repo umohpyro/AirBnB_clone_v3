@@ -5,6 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f979fd4d-c2dc-4d98-9a5a-1a0b05f20e6f" name="Changes" comment="updated test assertions">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/AirBnB_clone_v3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_models/test_base_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_models/test_base_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +109,7 @@
       <updated>1676342905700</updated>
       <workItem from="1676342907299" duration="5505000" />
       <workItem from="1676400095803" duration="11175000" />
-      <workItem from="1676415591561" duration="388000" />
+      <workItem from="1676415591561" duration="494000" />
     </task>
     <task id="LOCAL-00001" summary="updated test assertions">
       <created>1676406634374</created>
