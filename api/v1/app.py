@@ -1,26 +1,31 @@
 #!/usr/bin/python3
+"""API setup
 """
-This module contains the principal application
-"""
+from flask import Flask, jsonify, make_response
 from models import storage
 from api.v1.views import app_views
-from flask import Flask
 from os import getenv
 
 app = Flask(__name__)
-app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
+
 app.register_blueprint(app_views)
 
 
 @app.teardown_appcontext
-def close_db(obj):
-    """ calls methods close() """
-    storage.close()
+def end_session(exception):
+    """Calls on storage.close method
+    """
+    return storage.close()
+
+
+@app.errorhandler(404)
+def not_found(error):
+    """Page not found error handler
+    """
+    return make_response(jsonify({"error": "Not Found"}), 404)
 
 
 if __name__ == "__main__":
-
-    host = getenv('HBNB_API_HOST', default='0.0.0.0')
-    port = getenv('HBNB_API_PORT', default=5000)
-
-    app.run(host, int(port), threaded=True)
+    HOST = getenv('HBNB_API_HOST', default='0.0.0.0')
+    PORT = getenv('HBNB_API_PORT', default=5000)
+    app.run(host=HOST, port=PORT, threaded=True)
